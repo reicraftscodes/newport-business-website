@@ -1,0 +1,165 @@
+/*Styling only for naviagtion Section*/
+/*================= Top Bar With Navigation and Main Logo ===================*/
+.topblock {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  background: rgb(0, 79, 57);
+  background: rgba(0, 79, 57, 0.8);
+  width: 100%;
+  height: 70px;
+}
+
+/*Logo on Top Bar*/
+.nowlogotop {
+  height: 50px;
+  width: auto;
+  margin: 10px;
+}
+
+.navoption {
+  float: right;
+  right: 10px;
+}
+
+.navoption li {
+  list-style-type: none;
+  float: left;
+}
+
+/*Naviagtion Items on the top Bar*/
+
+.topblockitem {
+  text-align: justify;
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-family: calibri;
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.topblockitem img {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+/*================= Main Navigation Bar ===================*/
+
+.topnav {
+  position: absolute;
+  top: 70px;
+  height: 65px;
+  list-style-type: none;
+  margin-top: 0;
+  background: rgb(0, 130, 125);
+  background: rgba(0, 130, 125, 0.8);
+  width: 100%;
+  overflow: hidden;
+  font-family: Calibri;
+}
+.navitem {
+  text-align: justify;
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-family: calibri;
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navitem img {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.hidenavitems {
+  display: inline-block;
+}
+
+.moreinnav {
+  display: none;
+  float: right;
+}
+.closeinnav {
+  float: right;
+  display: none;
+}
+/* =================== Extended Navigation for Overflow Items ===================*/
+.extendednav {
+  visibility: collapse;
+  position: absolute;
+  top: 135px;
+  height: auto;
+  list-style-type: none;
+  margin-top: 0;
+  background: rgb(0, 130, 125);
+  background: rgba(0, 130, 125, 0.9);
+  width: 100%;
+  overflow: hidden;
+  font-family: Calibri;
+}
+
+.extendednav li a {
+  float: left;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/*==========================================================*/
+
+/*Styling for narrowing nav for Twitter feed on larger screens*/
+@media screen and (min-width: 1200px){
+  .topnav {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .topnav {
+    width: 100%;
+  }
+  .linkbuttonleft {
+    float: none;
+    width: 100%;
+  }
+  .linkbuttonright {
+    float: none;
+    width: 100%;
+  }
+  .topnav li a{
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  /*Hide Items from the nav on mobile*/
+  .hidenavitem {
+    display: none;
+  }
+  .moreinnav {
+    display: inline-block;
+  }
+  .navitem {
+    padding: auto;
+  }
+  .nowlogotop {
+    left: auto;
+    right: auto;
+  }
+}
+
+
+/*smaller than 768 px
+smaller than 1024 px
+larger than 1024 px*/

@@ -1,0 +1,62 @@
+{%extends 'stylePages/adminstylepage.html'%}
+
+
+{%block mainBlock%}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>Admin</h1>
+
+<h3> Logged in as: {{username}}</h3>
+
+<h2>Add New User</h2><br><br>
+<form id="userForm">
+  userID:<input type = "text" name = "userID"><br><br>
+  Username:<input type = "text" name = "userName"><br><br>
+  Password:<input type="text" name="password"><br><br>
+  UserType:<select name="usertype">
+    <option value="admin">admin</option>
+    <option value="member">member</option>
+  </select><br><br>
+  Company:<input type = "text" name = "usercompany"><br><br>
+
+  <button type = "submit"> submit </button>
+</form>
+
+<script>
+console.log('hello')
+  document.getElementById('userForm').onsubmit = function(e) {
+    e.preventDefault();
+    console.log('Hello again');
+    var UserID = document.forms["userForm"]["userID"].value;
+    var Username = document.forms["userForm"]["userName"].value;
+    var Password = document.forms["userForm"]["password"].value;
+    var Usertype = document.forms["userForm"]["usertype"].value;
+    var Company = document.forms["userForm"]["usercompany"].value;
+    var params = 'userID='+UserID+'&userName='+Username+'&password='+Password+'&usertype='+Usertype+'&usercompany='+Company;
+
+
+    console.log(params);
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", '/admin/addusersdata', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onload = function() {
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
+        console.log(xhttp.responseText);
+        // document.getElementById("txt").innerHTML = xhttp.responseText;
+      } else {
+        console.error(xhttp.statusText);
+      }
+    };
+    xhttp.send(params);
+    return false;
+  }
+
+</script>
+
+<p>{{ msg }} </p>
+{%endblock%}

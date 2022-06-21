@@ -1,0 +1,30 @@
+{%extends 'stylePages/businessstylepage.html'%}
+
+
+
+{%block mainBlock%}
+<br>
+<section class = "whiteBlock">
+  <a href="/businessSearch">
+    <img src="/static/img/icons/ic_arrow_back_black_24dp_2x.png"></img>
+  </a>
+  <h1 class = "resultsright">Results</h1>
+</section>
+
+  {% for row in data %}
+  <!-- A List of tuples so row is each item in the list
+       and then the index is the column number.-->
+  <section class = "whiteBlock">
+   <content class = "businessresults">
+     <h1 class = "companytitle">{{row[0]}}</h1><br>
+     <p class = "resultsleft">Type: {{row[1]}}</p><br>
+     <p class = "resultsleft">Description:</p><br>
+     <p class = "resultsleft">{{row[4]}}</p><br>
+     <p class = "resultsright">Contact Details</p><br>
+     <p class = "resultsright">Email: {{row[2]}}</p><br>
+     <p class = "resultsright">Phone Number: {{row[3]}}</p><br>
+   </content>
+ </section>
+  {% endfor %}
+
+{%endblock%}

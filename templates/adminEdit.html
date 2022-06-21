@@ -1,0 +1,74 @@
+{%extends 'stylePages/adminstylepage.html'%}
+
+{%block mainBlock%}
+<br>
+<form action="/admin/EditBusiness/Search" method="get">
+  <select name="searchBus" class = "searchbar">
+    {% for name in dataAll %}
+    <option>{{name[0]}}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Search</button>
+</form>
+<br>
+<br>
+<form method="post" id="editForm" action="/admin/EditBusiness/Edit">
+  ID: <input type = "text" name="ID" value="{{dataSearch[0][0]}}">
+  <br >
+  Company Name:  <input type = "text" name="compName" value="{{dataSearch[0][1]}}" >
+  <br>
+  Type:  <input type = "text" name="type" value="{{dataSearch[0][2]}}">
+  <br>
+  Salutation:  <input type = "text" name="salutation" value="{{dataSearch[0][3]}}">
+  <br>
+  First Name:  <input type = "text" name="fName" value="{{dataSearch[0][4]}}">
+  <br>
+  Last Name:  <input type = "text" name="lName" value="{{dataSearch[0][5]}}">
+  <br>
+  Phone:  <input type = "text" name="phoneNum" value="{{dataSearch[0][6]}}">
+  <br>
+  Mobile:  <input type = "text" name="mobileNum" value="{{dataSearch[0][7]}}">
+  <br>
+  Email:  <input type = "text" name="eMail" value="{{dataSearch[0][8]}}">
+  <br>
+  Street: <input type = "text" name="street" value="{{dataSearch[0][9]}}">
+  <br>
+  Post Code:  <input type = "text" name="postCode" value="{{dataSearch[0][10]}}">
+  <br>
+  <button type="submit">Edit</button>
+</form>
+
+<script>
+function loadEdit() {
+    var compName = document.forms["editForm"]["compName"].value;
+    var type = document.forms["editForm"]["type"].value;
+    var salutation = document.forms["editForm"]["salutation"].value;
+    var fName = document.forms["editForm"]["fName"].value;
+    var lName = document.forms["editForm"]["lName"].value;
+    var phoneNum = document.forms["editForm"]["phoneNum"].value;
+    var mobileNum = document.forms["editForm"]["mobileNum"].value;
+    var eMail = document.forms["editForm"]["eMail"].value;
+    var street = document.forms["editForm"]["street"].value;
+    var postCode = document.forms["editForm"]["postCode"].value;
+    params = 'ID=' + iD + 'Company name=' + compName + 'Salutation=' + salutation + 'First Name=' + fName + 'Last Name=' + lName + 'Phone number=' + phoneNum + 'Mobile Number=' + mobileNum + 'Email=' + eMail + 'Street=' + street + 'Post Code' + postCode;
+    console.log(iD);
+    console.log(compName);
+    var xhttp = new XMLHttpRequest();
+    console.log("hello2");
+    xhttp.open("POST", '/admin/EditBusiness/Edit', true); // true is asynchronous
+    console.log("hello3");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onload = function() {
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
+        console.log(xhttp.responseText);
+        // document.getElementById("txt").innerHTML = xhttp.responseText;
+      }
+      else {
+        console.error(xhttp.statusText);
+      }
+    };
+    xhttp.send(params);
+    // return false;
+  }
+</script>
+{%endblock%}

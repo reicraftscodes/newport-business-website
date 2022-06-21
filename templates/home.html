@@ -1,0 +1,46 @@
+{%extends 'stylePages/homestylepage.html'%}
+
+
+{%block mainBlock%}
+
+<content id = "twitterfeed" class="timeline-block">
+  <a class="twitter-timeline"
+    href="https://twitter.com/Newport_BID?ref_src=twsrc%5Etfw">
+  </a>
+</content>
+
+<nav class = "homebelownav">
+  <img class = "searchicon" src="/static/img/icons/ic_search_white_24dp_2x.png"></img>
+  <h1>Find it in your local Area</h1>
+  <a href="/businessSearch" class = "homebelownavitem">
+    <img src="/static/img/icons/ic_business_white_24dp_2x.png"></img>Find Busineses
+  </a>
+  <a href="/shopSearch" class = "homebelownavitem">
+    <img src="/static/img/icons/ic_shopping_basket_white_24dp_2x.png"></img>Find shops
+  </a>
+</nav>
+
+<br>
+<br>
+
+<article class = "maincontent">
+  <section class = "whiteBlock">
+    <h1>Spread the Word</h1>
+    <a class="twitter-follow-button"
+    href="https://twitter.com/newport_bid">
+    Follow Newport Now</a>
+    <a class="twitter-share-button"
+    href="https://twitter.com/intent/tweet">
+    Tweet</a>
+    <div class="fb-share-button" data-href="http://127.0.0.1:5000/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5000%2F&amp;src=sdkpreparse">Share</a></div>
+  </section>
+  <section class = "whiteBlock">
+    <p>Businesses in Newport have voted to establish a new business led mechanism to support and promote the city centre.<br><br>
+      The Newport Now BID went live on 1st April 2015 and is deliverng a range of projects as part of its five year programme of improvements.<br><br>
+      This is where you can find out the latest on the new Business Improvement Distinct in Newport, along with background information and upcoming events.
+      Please get in touch if you would like to find out more – info@newportbid.com</p>
+  </section>
+
+</article>
+
+{%endblock%}

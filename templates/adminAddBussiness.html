@@ -1,0 +1,98 @@
+{%extends 'stylePages/adminstylepage.html'%}
+
+
+{%block mainBlock%}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>Admin</h1>
+
+<h3> Logged in as: {{username}}</h3>
+
+<h2>Add Business Data</h2><br><br>
+<form id="dbForm">
+  Company:<input type = "text" name = "Company_Account"><br><br>
+  Type:<input type = "text" name = "type"><br><br>
+  Salutation:<input type="text" name="Salutation"><br><br>
+  First Name:<input type = "text" name = "FirstName"><br><br>
+  Last Name:<input type = "text" name = "LastName"><br><br>
+  Phone:<input type = "text" name = "Phone"><br><br>
+  Mobile:<input type = "text" name = "Mobile"><br><br>
+  Email:<input type = "text" name = "Email"><br><br>
+  Street:<input type = "text" name = "Street"><br><br>
+  Post Code:<input type = "text" name = "PostCode"><br><br>
+
+  <button type = "submit"> submit </button>
+</form>
+
+<!-- <form id='myForm' action='/WeDontWantThis' method='get' onsubmit="return loadName()">
+    name:<input type = "text" name = "name"><br>
+    number:<input type = "text" name = "num"><br>
+    <button type = "submit"> submit </button>
+  </form>
+
+<span id='txt'></span> -->
+
+<script>
+console.log('djhfjl')
+  document.getElementById('dbForm').onsubmit = function(e) {
+    e.preventDefault();
+    console.log('Hello');
+    var Company = document.forms["dbForm"]["Company_Account"].value;
+    var Type = document.forms["dbForm"]["type"].value;
+    var Salutation = document.forms["dbForm"]["Salutation"].value;
+    var FirstName = document.forms["dbForm"]["FirstName"].value;
+    var LastName = document.forms["dbForm"]["LastName"].value;
+    var Phone = document.forms["dbForm"]["Phone"].value;
+    var Mobile = document.forms["dbForm"]["Mobile"].value;
+    var Email = document.forms["dbForm"]["Email"].value;
+    var Street = document.forms["dbForm"]["Street"].value;
+    var PostCode = document.forms["dbForm"]["PostCode"].value;
+    var params = 'Company_Account='+Company+'&type='+Type+'&Salutation='+Salutation+'&FirstName='+FirstName+'&LastName='+LastName+'&Phone='+Phone+'&Mobile='+Mobile+'&Email='+Email+'&Street='+Street+'&PostCode='+PostCode;
+
+    console.log(params);
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", '/admin/addbussinessdata', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onload = function() {
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
+        console.log(xhttp.responseText);
+        document.getElementById("txt").innerHTML = xhttp.responseText;
+      } else {
+        console.error(xhttp.statusText);
+      }
+    };
+    xhttp.send(params);
+    return false;
+  }
+
+  // function loadName() {
+  //     alert('Hello123');
+  //
+  //     var name = document.forms["myForm"]["name"].value;
+  //     var num = document.forms["myForm"]["num"].value;
+  //     params = 'name='+name+'&num='+num;
+  //     var xhttp = new XMLHttpRequest();
+  //     xhttp.open("POST", '/AddContact', true); // true is asynchronous
+  //     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  //     xhttp.onload = function() {
+  //       if (xhttp.readyState === 4 && xhttp.status === 200) {
+  //         console.log(xhttp.responseText);
+  //         document.getElementById("txt").innerHTML = xhttp.responseText;
+  //       } else {
+  //         console.error(xhttp.statusText);
+  //       }
+  //     };
+  //     xhttp.send(params);
+  //     return false;
+  //   }
+
+</script>
+
+
+<p>{{ msg }} </p>
+{%endblock%}

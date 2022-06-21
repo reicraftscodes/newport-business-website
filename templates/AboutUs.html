@@ -1,0 +1,52 @@
+{%extends 'stylePages/mainstylepage.html'%}
+
+
+{%block mainBlock%}
+    <!-- About Us info -->
+  <article class = "maincontent">
+    <figure class = "whiteBlock">
+      <img src="static/img/aboutuslogosample.png" alt="Stay in touch with us" width="304" height="228" id="aboutus">
+    </figure>
+      <section class = "whiteBlock">
+        <h1>About the Newport Team </h1>
+        <p>
+          Businesses in Newport City Centre voted to establish a Business Improvement District (BID) to enhance their trading environment in December 2014.
+          The official start date for the BID was <strong>1<sup>st</sup> April 2015</strong> and we have been busy making arrangements so that we can start to deliver a range of projects and make a positive impact on the city centre.<br><br>
+          Since setting up in April, we have been working hard behind the scenes to prepare and develop our first year&#8217;s programme of services and improvements. Led by the board, three ‘Theme Groups’ – <strong>Future Newport</strong> (city centre strategy &amp; business support) <strong>Safe &amp; Secure Newport</strong> (improving the city centre experience), <strong>Welcome to Newport</strong> (marketing and events) &#8211; have been established, tasked with implementing each of the key programme area.  If you would like to get involved please get in touch.
+          Over the next few months we will be delivering a range of projects, in response to the issues raised by businesses within the city centre area.  For more information, please contact info@newportbid.com.<br><br>
+          The Newport Now BID will primarily be funded by eligible businesses through the BID levy – set at 1.25% of the rateable value of eligible properties.  The levy will be billed in one instalment each year.   It is also our intention to attract further funding from other sources, to supplement the BID levy.</p><br>
+          <h6 class="zemanta-related-title" style="font-size:1em;">
+            <strong>What is a BID?</strong></h6><br>
+            <p>A BID is a business-led and business funded body formed to improve a defined commercial area.</p><br>
+            A BID can only be formed following consultation and a ballot in which businesses vote on a BID Proposal or business plan for the area.<br>
+            If a ballot is successful, it is then managed and operated by a BID Company – a non-profit company run by and for its members &#8211; and is <span style="line-height:1.5em;">funded through the BID levy, which is a small percentage of a businesses’ rateable value.</span></p><br>
+            The improvements made by a BID are determined by businesses themselves  and are additional to services provided by the local authority. They can include core services such as additional cleansing and security or more wide-ranging projects such as business support, improved infrastructure, visitor services, area branding, promotions and cultural activities.</p><br>
+            <h2> Stay in touch with us.</h2>
+            <a href="#topofpage" class = "backtotopButton">
+              <img src="/static/img/icons/ic_arrow_upward_black_24dp_2x.png"></img>Back to Top of Page
+            </a>
+      </section>
+
+      <section class = "whiteBlock">
+        <h2>Register a new Account</h2><br><br>
+        <form id="userForm">
+          First Name:<input type = "text"><br><br>
+          Last Name:<input type = "text"><br><br>
+          Company:<input type="text"><br><br>
+          Email Adress:<input type = "text"><br><br>
+          Mobile Number:<input type = "text"><br><br>
+
+          <button onclick="button1()" type = "submit"> submit </button>
+        </form>
+
+        <article><p> <span id="now"></span> </p></article>
+
+        <script>
+        function button1() {
+        console.log('this is working');
+        alert("Your contact information has been sent successfully. An email will be sent to you from the Newport Team to verify your account");
+    }
+        </script>
+      </section>
+    </article>
+{%endblock%}

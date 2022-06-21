@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <title>Newport Trading Website</title>
+  <head>
+    <link rel="stylesheet" type = "text/css" href="/static/css/homeStyle.css">
+    <link rel="stylesheet" type = "text/css" href="/static/css/homenavstyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+  </head>
+  <body>
+    <!-- Facebook functionaility -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs)
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Google+ functionaility -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+    {lang: 'en-GB'}
+    </script>
+
+   <header class = "topblock" id = "topofpage">
+     <a href="/home" >
+       <img class = "nowlogotop" src="/static/img/nowLogowhite.png" alt = "Newport Now Logo">
+     </a>
+     <ul class = "navoption">
+       <li>{{uName}}</a></li>
+       <a href="/home" class = "topblockitem">
+         <img src="/static/img/icons/ic_accessibility_white_24dp_2x.png"></img>Accessibility
+       </a>
+       <a href="/home" class = "topblockitem">
+         <img src="/static/img/icons/ic_language_white_24dp_2x.png"></img>Welsh
+       </a>
+       <a href="/login" class = "topblockitem">
+         <img src="/static/img/icons/ic_account_circle_white_24dp_2x.png"></img>Login
+       </a>
+     </ul>
+   </header>
+   <section class = "slidebox">
+    <img class="slides" src="/static/img/slides/1.jpg">
+    <img class="slides" src="/static/img/slides/2.jpg">
+    <img class="slides" src="/static/img/slides/3.jpg">
+    <img class="slides" src="/static/img/slides/4.jpg">
+    <img class="slides" src="/static/img/slides/5.jpg">
+    <img class="slides" src="/static/img/slides/6.jpg">
+    <img class="slides" src="/static/img/slides/7.jpg">
+    <img class="slides" src="/static/img/slides/8.jpg">
+    <script src="/static/js/carousel.js"></script>
+   </section>
+   <nav>
+     <ul class = "topnav">
+       <a href="/aboutNewport" class = "navitem">
+         <img src="/static/img/icons/ic_explore_white_24dp_2x.png"></img>About Newport
+       </a>
+       <a href="/events" class = "navitem">
+         <img class = "navicon" src="/static/img/icons/ic_event_white_24dp_2x.png"></img>Events
+       </a>
+       <a href="/news" class = "navitem">
+         <img src="/static/img/icons/ic_announcement_white_24dp_2x.png"></img>News
+       </a>
+       <span class = "moreinnav" id = "morebtn">
+         <a onclick = "opennav()" class = "navitem">
+           <img src="/static/img/icons/ic_expand_more_white_24dp_2x.png"></img>More
+         </a>
+       </span>
+       <span class = "closeinnav" id = "closebtn">
+         <a onclick = "closenav()" class = "navitem">
+           <img src="/static/img/icons/ic_close_white_24dp_2x.png"></img>Close
+         </a>
+       </span>
+       <span class = "hidenavitems">
+         <a href="/shopSearch" class = "navitem">
+           <img src="/static/img/icons/ic_store_white_24dp_2x.png"></img>Find Shops
+         </a>
+         <a href="/businessSearch" class = "navitem">
+           <img src="/static/img/icons/ic_business_center_white_24dp_2x.png"></img>Company Directory
+         </a>
+         <a href="/aboutus" class = "navitem">
+           <img class = "navicon" src="/static/img/icons/ic_info_outline_white_24dp_2x.png"></img>About Us
+         </a>
+       </span>
+     </ul>
+   </nav>
+   <nav>
+     <ul id = "extendednav" class = "extendednav">
+       <a href="/shopSearch" class = "navitem">
+         <img src="/static/img/icons/ic_store_white_24dp_2x.png"></img>Find Shops
+       </a>
+       <a href="/businessSearch" class = "navitem">
+         <img src="/static/img/icons/ic_business_center_white_24dp_2x.png"></img>Company Directory
+       </a>
+       <a href="/aboutus" class = "navitem">
+         <img class = "navicon" src="/static/img/icons/ic_info_outline_white_24dp_2x.png"></img>About Us
+       </a>
+       <a href="/home" class = "topblockitem">
+         <img src="/static/img/icons/ic_language_white_24dp_2x.png"></img>Welsh
+       </a>
+       <a href="/login" class = "topblockitem">
+         <img src="/static/img/icons/ic_account_circle_white_24dp_2x.png"></img>Login
+       </a>
+     </ul>
+   </nav>
+
+
+     {% block mainBlock%}Page under construction. {%endblock%}
+
+     <!-- <div id="fb-root"></div> -->
+    <script>
+    // ============= Twitter Feed functionaility ======================
+      window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+
+    // ============= Twitter Feed Scroll ======================
+
+    function twitterfeedScroll() {
+      var elmnt = document.getElementById("twitterfeed");
+      // var x = elmnt.scrollLeft;
+      var y = elmnt.scrollTop;
+    }
+
+    // ============= facebook functionaility ======================
+    </script>
+    <script src="/static/js/navdropdown.js"></script>
+  </body>
+</html>

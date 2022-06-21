@@ -1,0 +1,41 @@
+{%extends 'stylePages/mainstylepage.html'%}
+
+
+
+{%block mainBlock%}
+<br>
+<article class ="maincontent">
+  <section class = "whiteBlock">
+    <a href="/shopSearch">
+      <img src="/static/img/icons/ic_arrow_back_black_24dp_2x.png"></img>
+    </a>
+    <h1 class = "shopresultsright">Results</h1>
+  </section>
+
+  {% for row in data %}
+  <!-- A List of tuples so row is each item in the list
+       and then the index is the column number.-->
+  <section class = "whiteBlock">
+   <content class = "shopresults">
+     <h1 class = "companytitle">{{row[1]}}</h1>
+     <iframe class = "resultsmapbox"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9LhKx9smAr0A4Qhbb97XqLW88TfI6NkE
+         &q={{row[9]}} + {{row[10]}} + Newport
+         &zoom=14" allowfullscreen>
+     </iframe>
+     <p class = "shopresultsleft">Type: {{row[2]}}</p><br>
+     <p class = "shopresultsleft">Description:</p><br>
+     <p class = "shopresultsleft">Currently Not Available</p><br><br>
+     <p class = "shopresultsleft">Address</p><br>
+     <p class = "shopresultsleft">{{row[9]}}</p><br>
+     <p class = "shopresultsleft">{{row[10]}}</p><br><br>
+     <p class = "shopresultsleft">Contact Details</p><br>
+     <p class = "shopresultsleft">Email: {{row[8]}}</p><br>
+     <br>
+   </content>
+ </section>
+
+  {% endfor %}
+</article>
+{%endblock%}

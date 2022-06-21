@@ -1,0 +1,233 @@
+/*CSS margin and padding rest*/
+*{
+  padding: 0;
+  margin: 0;
+  }
+
+/*Background Image */
+body {
+  background-image: url("/static/img/newportsky.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.timeline-block {
+  position: absolute;
+  width: 20%;
+  height: calc(100vh - 90px);
+  top: 70px;
+  right: 0;
+  overflow: hidden;
+}
+
+.options {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 300px;
+}
+
+.maincontent {
+  margin-top: 145px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.slidebox {
+  width: 100%;
+  height: calc(100vh - 160px);
+  overflow: hidden;
+}
+
+.slides {
+  width: 100vw;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  /*height: 100vh;*/
+}
+
+
+/*==========================================================*/
+/*Homepage Content*/
+
+.textblock {
+  font-family: calibri;
+  width: 70%;
+}
+
+/*Block Style for sections*/
+.whiteBlock {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  /*Shadow around box*/
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.83);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.83);
+  box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.83);
+  /*Text Styling*/
+  color: black;
+  font-family: calibri;
+}
+
+.whiteBlock li {
+  margin-left: 30px;
+}
+/*==========================================================*/
+/*About Newport Page Content*/
+
+.mapbox {
+  margin-top: 135px;
+  width: 100%;
+  height: calc(100vh - 300px);
+  overflow: hidden;
+}
+
+/*About Newport page Navigation*/
+.aboutnewportnav {
+  text-align: center;
+  overflow: hidden;
+  background: rgb(0, 130, 125);
+  background: rgba(0, 130, 125, 0.8);
+  width: 100%;
+  height: auto;
+}
+
+.aboutnewportnav a, .aboutnewportnav h1 {
+  font-family: calibri;
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.newportnavitem {
+  text-align: justify;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.newportnavitem img {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.aboutNewportimg {
+  width: 100%;
+
+}
+
+/*Bus comapny logo's*/
+.buslist img{
+  /*Shadow around box*/
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.83);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.83);
+  box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.83);
+  width: 25%;
+  margin: 10px;
+  padding: 10px;
+}
+
+/*Styling for back to top of page button*/
+.backtotopButton {
+  text-align: center;
+  margin: 10px;
+  font-family: calibri;
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+  display: block;
+}
+
+.backtotopButton img {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+/*======================= Search Page ===================================*/
+.searcharea {
+  font-family: calibri;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 50vh;
+  }
+
+.searchbar {
+  width: 87%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+}
+
+.searchsubmit{
+  background: url(/static/img/icons/ic_search_white_24dp_2x.png) no-repeat;
+  background-position: right;
+  background-size: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(0, 130, 125);
+  color: white;
+  width: 30%;
+  padding: 10px 18px;
+  margin: 10px 0;
+  border: none;
+}
+
+/*======================= Search results Page ===================================*/
+
+
+.shopresultsleft {
+  float: left;
+  width: 70%;
+}
+.shopresultsright {
+  float: right;
+}
+
+.resultsmapbox {
+  width: 30%;
+  /*overflow: hidden;*/
+}
+/*==========================================================*/
+
+@media screen and (max-width: 600px){
+    .maincontent {
+      margin-top: 145px;
+      margin-left: auto;
+      margin-right: auto;
+      /*margin: 10px;*/
+      width: 95%;
+    }
+    .slidebox {
+      height: 400px;
+    }
+    .mapbox {
+      height: 300px;
+    }
+    .timeline-block {
+      position: static;
+      height: 200px;
+    }
+    .topnav {
+      width: 100%;
+    }
+    .searchsubmit {
+      width: 70%;
+    }
+    /*Mobile page - whiteBlock has smaller margin*/
+    .whiteBlock {
+      margin: 10px;
+      padding: 10px;
+    }
+    .resultsmapbox {
+      width: 100%;
+    }

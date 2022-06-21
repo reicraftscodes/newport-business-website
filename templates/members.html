@@ -1,0 +1,17 @@
+{%extends 'stylePages/businessstylepage.html'%}
+
+{%block mainBlock%}
+<div class = "searcharea">
+<header>
+  <h1>Members Search Page</h1>
+</header>
+<form action="/memberSearch/Result" method="get">
+  <select name = "members" class="searchbar">
+    {% for row in data %}
+    <option>{{row[1]}}</option>
+    {% endfor %}
+  </select>
+  <button type="submit" class = "searchsubmit">Search</button>
+</form>
+</div>
+{%endblock%}

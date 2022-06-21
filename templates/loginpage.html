@@ -1,0 +1,20 @@
+{%extends 'stylePages/businessstylepage.html'%}
+
+
+{%block mainBlock%}
+<article class = "maincontent">
+<br>
+  <section class = "whiteBlock">
+    <form id="loginform" method="post" action="/loginuser" class = "searcharea">
+      <p>If you have an account with Newport Now Please Login Below</p><br>
+      Username: <br>
+      <input class = "searchbar" type = "text" name = "username"><br>
+      Password: <br>
+      <input class = "searchbar" type = "password" name = "password"><br>
+      <button class = "loginsubmit" type = "submit"> Login </button>
+      <p>{{ msg }}</p>
+    </form>
+  </section>
+</article>
+
+{%endblock%}

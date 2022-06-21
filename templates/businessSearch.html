@@ -1,0 +1,29 @@
+{%extends 'stylePages/businessstylepage.html'%}
+
+
+{%block mainBlock%}
+<br>
+<section class = "whiteBlock">
+  <div class = "searcharea">
+    <h1 >Find local businesses in Newport</h1>
+    <form action="businessSearch/searchresult" method="GET">
+      <p>Find Businesses by name</p>
+      <input class = "searchbar" type="text" name="search">
+      <input class = "searchsubmit" type="submit" value="Search">
+    </form>
+    <form action="businessSearch/searchresult2" method="GET">
+      <p>Find Businesses by Category</p>
+      <select name="searchtype" class = "searchbar">
+        <option value="Retail">Retail</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Real Estate">Real Estate</option>
+        <option value="Building">Building</option>
+        <option value="Architect">Architect</option>
+        <option value="Finance">Finance</option>
+        <option value="Food">Food</option>
+      </select>
+      <input type="submit" value="Search" class = "searchsubmit">
+    </form>
+  </div>
+</section>
+{%endblock%}

@@ -1,0 +1,26 @@
+{%extends 'stylePages/mainstylepage.html'%}
+
+{%block mainBlock%}
+<content class="timeline-block">
+  <a class="twitter-timeline"
+    href="https://twitter.com/Newport_BID?ref_src=twsrc%5Etfw"
+    data-width="300"
+    data-height="555">
+  </a>
+</content>
+<br>
+
+<article class = "maincontent">
+  {% for row in data %}
+  <section class = "whiteBlock">
+    <header>
+      <h1>{{row[0]}} - {{row[1]}}</h1>
+    </header>
+    <br>
+    <p>{{row[2]}}</p>
+    <br>
+  </section>
+  {% endfor %}
+</article>
+
+{%endblock%}

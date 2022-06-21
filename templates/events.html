@@ -1,0 +1,113 @@
+{%extends 'stylePages/newsstylepage.html'%}
+{%block mainBlock%}
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/css/calendar.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body class="calendar">
+
+<h1>CSS Calendar</h1>
+
+<div class="month">
+  <ul>
+    <li class="prev">❮</li>
+    <li class="next">❯</li>
+    <li style="text-align:center">
+      August<br>
+      <span style="font-size:18px">2016</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li id = "1" style="background-color:orange">1</li>
+  <li id = "2" style="background-color:orange">2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+
+<section id="event1" style="display:none">
+  <header>
+    <h1>Event 1</h1>
+  </header>
+  <p>
+    Event 1 Content <br>
+    line 1 <br>
+    line 2
+  </p>
+</section>
+
+<section id="event2" style="display:none">
+  <header>
+    <h1>Event 2</h1>
+  </header>
+  <p>
+    Event 2 Content <br>
+    line 1 <br>
+    line 2
+  </p>
+</section>
+
+<script>
+$(document).ready(function(){
+//$("#list li").on("click", function(){
+  $(".days").on("click","li", function(){
+    $(".days").children().css("background-color", "transparent");
+    $(".days").children().css("color", "#777");
+
+  });
+
+ $(".days").on("click","li", function(){
+  $("#1").css("background-color", "orange")
+  $("#2").css("background-color", "orange")
+  $(this).css("background","#1abc9c");
+  $(this).css("color", "white");
+  $("section").css("display", "none")
+  var day = $(this).text()
+  if(day == "1"){
+    $("#event1").css("display", "block");
+  }
+  else if (day == "2") {
+    $("#event2").css("display", "block");
+  }
+  });
+})
+</script>
+{%endblock%}
