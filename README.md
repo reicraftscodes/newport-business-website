@@ -1,5 +1,7 @@
 # Installation and Configuration
 
+The python configuration and configuration can be found here at https://code.visualstudio.com/docs/python/tutorial-flask 
+
 1) Use the following command to create and activate a virtual environment named .venv based on your current interpreter in the bash terminal
 - py -3 -m venv .venv .venv\scripts\activate
 
@@ -18,4 +20,4 @@
     - locate newportserver.py
     - CTRL + ' and select bash terminal. Inside the bash terminal type the folliwing -> export FLASK_APP=newportserver.py
     - lastly, in the bash terminal type -> python -m flask run  
-
+7) Go to link http://127.0.0.1:5000/home to get started
